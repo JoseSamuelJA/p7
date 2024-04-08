@@ -16,12 +16,24 @@ public:
     Persona(string n, int e, string o) : nombre(n), edad(e), ocupacion(o) {}
 
     // Métodos para establecer y obtener los valores de los atributos
-    void setNombre(string n) { nombre = n; }
-    void setEdad(int e) { edad = e; }
-    void setOcupacion(string o) { ocupacion = o; }
-    string getNombre() const { return nombre; }
-    int getEdad() const { return edad; }
-    string getOcupacion() const { return ocupacion; }
+    void setNombre(string n) { 
+	nombre = n; 
+	}
+    void setEdad(int e){
+	edad = e;
+	}
+    void setOcupacion(string o) {
+	ocupacion = o;
+	}
+    string getNombre() const {
+	return nombre; 
+	}
+    int getEdad() const {
+	return edad;
+	}
+    string getOcupacion() const {
+	return ocupacion;
+	}
 };
 
 // Función para almacenar los datos de las personas en un archivo de texto
@@ -31,7 +43,7 @@ void guardarPersonas(const vector<Persona>& personas) {
         cout << "Error al abrir el archivo." << endl;
         return;
     }
-    for (const auto& persona : personas) {
+    archivo  void (const auto& persona : personas) {
         archivo << "Nombre: " << persona.getNombre() << ", Edad: " << persona.getEdad() << ", Ocupacion: " << persona.getOcupacion() << endl;
     }
     archivo.close();
